@@ -265,15 +265,15 @@ echo""
 read masternodeprivkey
 privkey=$(echo $masternodeprivkey)
 checkpriv_key=$(echo $masternodeprivkey | wc -c)
-if [ "$checkpriv_key" -ne "52" ];
+if [ "$checkpriv_key" -ne "51" ];
 then
 	echo ""
-	echo "Looks like your $privkey is not correct, it should cointain 52 symbols, please paste it one more time"
+	echo "Looks like your $privkey is not correct, it should cointain 51 symbols, please paste it one more time"
 	read masternodeprivkey
 privkey=$(echo $masternodeprivkey)
 checkpriv_key=$(echo $masternodeprivkey | wc -c)
 
-if [ "$checkpriv_key" -ne "52" ];
+if [ "$checkpriv_key" -ne "51" ];
 then
         echo "Something wrong with masternodeprivkey, cannot continue" && exit 1
 fi
