@@ -69,13 +69,13 @@ read wan
 					cd /usr/bin &&
 					sudo rm -fr cryptocurrency-cli cryptocurrencyd &&
 					cd ~ &&
-					rm -fr cryptocurrency-cli cryptocurrencyd cryptocurrency-tx cryptocurrency.ubuntu18.04.zip &&
+					sudo rm -fr cryptocurrency-cli cryptocurrencyd cryptocurrency-tx cryptocurrency.ubuntu18.04.zip &&
 					echo -e "${GREEN}2/5 Old Cryptocurrency wallet is deleted${NC}" &&
 					wget https://github.com/CCYofficial/CCY/releases/download/1.0.0.0/cryptocurrency.ubuntu18.04.zip &&
 					echo -e "${GREEN}3/5 Cryptocurrency wallet is downloaded${NC}" &&
 					unzip -o cryptocurrency*.zip &&
 					sudo cp -fr cryptocurrency-cli cryptocurrencyd /usr/bin/ &&
-					rm -fr cryptocurrency-cli cryptocurrencyd cryptocurrency-tx cryptocurrency-qt cryptocurrency.ubuntu18.04.zip &&
+					sudo rm -fr cryptocurrency-cli cryptocurrencyd cryptocurrency-tx cryptocurrency-qt cryptocurrency.ubuntu18.04.zip &&
 					cd /usr/bin &&
 					chmod -R 755 cryptocurrency-cli cryptocurrencyd &&
 					cd ~ &&
@@ -144,7 +144,7 @@ if [ "$OS_version" -eq "1" ]; then
 		sudo wget https://github.com/CCYofficial/MN-Script-IPv4/raw/master/libs.zip
 		unzip -o libs.zip
 		sudo cp -fr libboost_filesystem.so.1.58.0 libboost_chrono.so.1.58.0 libboost_program_options.so.1.58.0 libboost_system.so.1.58.0 libboost_thread.so.1.58.0 libminiupnpc.so.10 libevent_core-2.0.so.5 libevent_pthreads-2.0.so.5 libevent-2.0.so.5 /usr/lib/
-		rm -fr libboost_filesystem.so.1.58.0 libboost_chrono.so.1.58.0 libboost_program_options.so.1.58.0 libboost_system.so.1.58.0 libboost_thread.so.1.58.0 libminiupnpc.so.10 libevent_core-2.0.so.5 libevent_pthreads-2.0.so.5 libevent-2.0.so.5 libs.zip
+		sudo rm -fr libboost_filesystem.so.1.58.0 libboost_chrono.so.1.58.0 libboost_program_options.so.1.58.0 libboost_system.so.1.58.0 libboost_thread.so.1.58.0 libminiupnpc.so.10 libevent_core-2.0.so.5 libevent_pthreads-2.0.so.5 libevent-2.0.so.5 libs.zip
         if [ $? -ne "0" ]; then echo "Unable to install libboost dependencies" && exit 1; fi
         else
 # Install dep. for Xenial //		
@@ -182,7 +182,7 @@ rm -R -fr cryptocurrency.ubuntu18.04
 unzip -o cryptocurrency*.zip
 echo ""
 sudo cp -fr cryptocurrency-cli cryptocurrencyd /usr/bin/
-rm -fr cryptocurrency-cli cryptocurrencyd cryptocurrency-tx cryptocurrency-qt cryptocurrency.ubuntu18.04.zip cryptocurrency.ubuntu16.04.zip
+sudo rm -fr cryptocurrency-cli cryptocurrencyd cryptocurrency-tx cryptocurrency-qt cryptocurrency.ubuntu18.04.zip cryptocurrency.ubuntu16.04.zip
 cd /usr/bin
 chmod -R 755 cryptocurrency-cli cryptocurrencyd
 cd ~
@@ -318,13 +318,13 @@ echo ""
 # Fast download Blockchain
 cd ~
 cd .cryptocurrency
-rm -R blocks chainstate
+sudo rm -R blocks chainstate
 echo ""
 echo -e "${GREEN}5/6 please wait, installation script downloads Cryptocurrency blockchain ${NC}"
 echo ""
 wget https://github.com/CCYofficial/CCY/releases/download/1.0.0.0/cryptocurrency-blockchain.zip
 unzip -o cryptocurrency-blockchain.zip
-rm -f  cryptocurrency-blockchain.zip
+sudo rm -f  cryptocurrency-blockchain.zip
 
 # Final start
 echo ""
