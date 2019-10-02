@@ -341,4 +341,3 @@ echo "Cryptocurrency Core datadir: "$(echo $HOME/.cryptocurrency/)""
 echo ""
 echo -e "Need additional help? Please visit Cryptocurrency Discord channel{NC}"
 echo ""
-cryptocurrency-cli getinfo | grep blocks
