@@ -71,7 +71,7 @@ read wan
 					cd ~ &&
 					sudo rm -fr cryptocurrency-cli cryptocurrencyd cryptocurrency-tx cryptocurrency.ubuntu18.04.zip &&
 					echo -e "${GREEN}2/5 Old Cryptocurrency wallet is deleted${NC}" &&
-					wget https://github.com/CCYofficial/CCY/releases/download/1.0.0.0/cryptocurrency.ubuntu18.04.zip &&
+					wget https://github.com/CCYofficial/CCY/releases/download/1.1.0.0/cryptocurrency.ubuntu18.04.zip &&
 					echo -e "${GREEN}3/5 Cryptocurrency wallet is downloaded${NC}" &&
 					unzip -o cryptocurrency*.zip &&
 					sudo cp -fr cryptocurrency-cli cryptocurrencyd /usr/bin/ &&
@@ -109,7 +109,7 @@ read wan
 					cd ~ &&
 					rm -fr cryptocurrency-cli cryptocurrencyd cryptocurrency-tx cryptocurrency.ubuntu16.04.zip &&
 					echo -e "${GREEN}2/5 Old Cryptocurrency wallet is deleted${NC}" &&
-					wget https://github.com/CCYofficial/CCY/releases/download/1.0.0.0/cryptocurrency.ubuntu16.04.zip &&
+					wget https://github.com/CCYofficial/CCY/releases/download/1.1.0.0/cryptocurrency.ubuntu16.04.zip &&
 					echo -e "${GREEN}3/5 Cryptocurrency wallet is downloaded${NC}" &&
 					unzip -o cryptocurrency*.zip &&
 					sudo cp -fr cryptocurrency-cli cryptocurrencyd /usr/bin/ &&
@@ -172,10 +172,10 @@ rm -fr cryptocurrency*.zip
 rm -R -fr cryptocurrency.ubuntu18.04
 
             if [ "$OS_version" -eq "1" ]; then
-                wget https://github.com/CCYofficial/CCY/releases/download/1.0.0.0/cryptocurrency.ubuntu18.04.zip
+                wget https://github.com/CCYofficial/CCY/releases/download/1.1.0.0/cryptocurrency.ubuntu18.04.zip
 		if [ $? -ne "0" ]; then echo "Failed to download cryptocurrencyd binary" && exit 1; fi
             elif [ "$OS_version2" -eq "1" ]; then
-                wget https://github.com/CCYofficial/CCY/releases/download/1.0.0.0/cryptocurrency.ubuntu16.04.zip
+                wget https://github.com/CCYofficial/CCY/releases/download/1.1.0.0/cryptocurrency.ubuntu16.04.zip
 		if [ $? -ne "0" ]; then echo "Failed to download cryptocurrencyd binary" && exit 1; fi
             fi
 # Manage coin daemon and configuration //
@@ -322,7 +322,7 @@ sudo rm -R blocks chainstate
 echo ""
 echo -e "${GREEN}5/6 please wait, installation script downloads Cryptocurrency blockchain ${NC}"
 echo ""
-wget https://github.com/CCYofficial/CCY/releases/download/1.0.0.0/cryptocurrency-blockchain.zip
+wget https://github.com/CCYofficial/CCY/releases/download/1.1.0.0/cryptocurrency-blockchain.zip
 unzip -o cryptocurrency-blockchain.zip
 sudo rm -f  cryptocurrency-blockchain.zip
 
