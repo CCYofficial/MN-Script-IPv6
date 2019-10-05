@@ -51,7 +51,8 @@ if [ -z "${wanipv6}" ]; then
     echo -e "${RED}Sorry, we don't know your external IPv6 addr${NC}" && echo ""
     echo -e "${GREEN}Input your IPv6 addr manually:${NC}" && read wanipv6
 fi
-echo "Your external IPv6 is $wanipv6 y/n?"
+echo "Your external IPv6 is $wanipv6"
+echo -e "${GREEN}(y)es${NC}/${RED}(n)o"${NC}
 read wan
             if [ "$wan" != "y" ]; then
                echo -e "${RED}Sorry, we don't know your external IPv6 addr${NC}" && exit 1
@@ -339,5 +340,5 @@ echo "Your external IPv6 addr: $wanipv6"
 echo "Installation log: ~/cryptocurrency_masternode_installation.log"
 echo "Cryptocurrency Core datadir: "$(echo $HOME/.cryptocurrency/)""
 echo ""
-echo -e "Need additional help? Please visit Cryptocurrency Discord channel{NC}"
+echo -e "Need additional help? Please visit Cryptocurrency Discord channel${NC}"
 echo ""
