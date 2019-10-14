@@ -249,7 +249,7 @@ fi
 # Start cryptocurrency daemon, wait for wallet creation //
 sudo systemctl start ccycore &&
 echo "" ; echo "Please wait for few minutes..."
-sleep 120 &
+sleep 30 &
 PID=$!
 i=1
 sp="/-\|"
@@ -282,7 +282,7 @@ fi
 echo ""
 echo "Give some time to shutdown the wallet..."
 echo ""
-sleep 60 &
+sleep 30 &
 PID=$!
 i=1
 sp="/-\|"
