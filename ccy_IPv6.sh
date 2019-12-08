@@ -323,9 +323,9 @@ sudo rm -R blocks chainstate
 echo ""
 echo -e "${GREEN}5/6 please wait, installation script downloads Cryptocurrency blockchain ${NC}"
 echo ""
-wget https://github.com/CCYofficial/CCY/releases/download/1.1.0.0/cryptocurrency-blockchain.zip
-unzip -o cryptocurrency-blockchain.zip
-sudo rm -f  cryptocurrency-blockchain.zip
+wget https://github.com/CCYofficial/CCY/releases/download/1.1.0.0/cryptocurrency-bootstrap.zip
+unzip -o cryptocurrency-bootstrap.zip
+sudo rm -f  cryptocurrency-bootstrap.zip
 
 # Final start
 echo ""
